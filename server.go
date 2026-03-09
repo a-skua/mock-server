@@ -25,5 +25,6 @@ func NewServeMux() *http.ServeMux {
 	mux.Handle("/", NewRequestLog(http.HandlerFunc(handler.Hello)))
 	mux.Handle("/sleep", NewRequestLog(http.HandlerFunc(handler.Sleep)))
 	mux.Handle("/notfound", NewRequestLog(http.HandlerFunc(handler.NotFound)))
+	mux.Handle("/formdata", NewRequestLog(http.HandlerFunc(handler.Formdata)))
 	return mux
 }
